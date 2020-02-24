@@ -8,10 +8,11 @@ import (
 func main() {
 	var test = []int{3, 2, 4}
 	target := 6
-	result := twoSum(test, target)
-	fmt.Printf("%v", result)
+	result := twoSum2(test, target)
+	fmt.Println(result)
 }
 
+// 暴力法
 func twoSum(nums []int, target int) []int {
 	if len(nums) < 1 {
 		return nil
@@ -25,4 +26,21 @@ func twoSum(nums []int, target int) []int {
 		}
 	}
 	return nil
+}
+
+// 使用map哈希查找
+
+func twoSum2(nums []int, target int) []int {
+	result := make([]int, 0)
+	maps := make(map[int]int)
+	for key, val := range nums {
+		_, dp := maps[target-val]
+		if dp {
+			result = append(result, maps[target-val])
+			result = append(result, key)
+			break
+		}
+		maps[val] = key
+	}
+	return result
 }
