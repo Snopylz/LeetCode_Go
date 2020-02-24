@@ -29,7 +29,7 @@ func twoSum(nums []int, target int) []int {
 }
 
 // 使用map哈希查找
-
+// {3, 2, 4} 6
 func twoSum2(nums []int, target int) []int {
 	result := make([]int, 0)
 	maps := make(map[int]int)
