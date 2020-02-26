@@ -1,7 +1,5 @@
 # LeetCode 
-Just a small step.
-
-
+Just a small step.尽量每天完成一道题
 
 ## 栈
 
